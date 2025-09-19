@@ -259,6 +259,28 @@
         color: var(--brand);
         font-weight: 700;
       }
+      .flow {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        counter-reset: step;
+      }
+      .flow .step {
+        position: relative;
+        padding: 16px;
+        border-radius: 14px;
+        background: #10173a;
+        border: 1px dashed rgba(255, 255, 255, 0.08);
+      }
+      .flow .step::before {
+        counter-increment: step;
+        content: counter(step);
+        position: absolute;
+        inset: auto auto 8px 12px;
+        font-weight: 800;
+        color: var(--brand);
+        font-size: 12px;
+      }
       @media (max-width: 980px) {
         .hero,
         .grid-2,
