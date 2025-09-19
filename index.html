@@ -281,6 +281,24 @@
         color: var(--brand);
         font-size: 12px;
       }
+      .table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        overflow: auto;
+        display: block;
+      }
+      .table th,
+      .table td {
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 10px 12px;
+        text-align: left;
+      }
+      .table th {
+        background: #0e1533;
+        position: sticky;
+        top: 0;
+      }
       @media (max-width: 980px) {
         .hero,
         .grid-2,
