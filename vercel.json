@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "public": true,
+  "builds": [
+    {
+      "src": "stories/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    { "src": "/stories/(.*)", "dest": "/stories/$1" },
+    { "src": "/(.*\\.html)", "dest": "/$1" }
+  ]
+}
