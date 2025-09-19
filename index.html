@@ -301,38 +301,104 @@
             어려운 금융을 <span class="em">동화·일러스트·음성</span>으로 쉽게
           </h1>
           <p class="subtitle">
-            시니어·사회초년생·어린이를 위해 복잡한 금융 개념을 스토리텔링으로
-            자동 제작하는 혁신 서비스
+            시니어·사회초년생·부모 동행 어린이를 위해 복잡한 금융 개념을
+            스토리텔링으로 자동 제작하는 혁신 서비스
           </p>
           <div class="cta">
-            <a class="btn primary" href="#poc">PoC 데모 바로가기</a>
+            <a class="btn primary" href="#solution">서비스 보기</a>
+            <a class="btn ghost" href="#poc">PoC 체험하기</a>
+          </div>
+          <div class="row mt-4 ghost">
+            <span class="tag">RAG</span>
+            <span class="tag">파인튜닝 LLM</span>
+            <span class="tag">이미지 생성</span>
+            <span class="tag">TTS</span>
+            <span class="tag">다채널 연동</span>
           </div>
         </div>
         <div class="hero-card">
           <div class="hero-grid">
             <div class="card">
               <h3>동화 공장</h3>
-              <p>약관·사기사례·법규 → 스토리 자동 변환</p>
+              <p class="chip">약관·사기사례·법규 → 스토리 자동 변환</p>
             </div>
             <div class="card">
               <h3>개인화</h3>
-              <p>연령/상황 기반 맞춤 추천</p>
+              <p class="chip">연령/상품/이력 기반 맞춤 추천</p>
             </div>
             <div class="card">
               <h3>멀티미디어</h3>
-              <p>텍스트+일러스트+음성 나레이션</p>
+              <p class="chip">텍스트+일러스트+음성 나레이션</p>
             </div>
             <div class="card">
-              <h3>확장성</h3>
-              <p>신규 문서 추가로 즉시 학습</p>
+              <h3>다채널</h3>
+              <p class="chip">앱·영업점·콜센터·메신저·ATM</p>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- 문제 & 배경 -->
+      <section id="problem">
+        <div class="container">
+          <h2>문제 & 제안 배경</h2>
+          <p class="lead">
+            금융 서비스의 <b>정보 비대칭·복잡성</b>으로 인한 이해 부족과 소외.
+            특히 시니어·사회초년생에게 심각.
+          </p>
+          <div class="grid-2">
+            <div class="card">
+              <h3>시니어(고령층)</h3>
+              <p>
+                복잡한 절차·작은 글씨·빠른 변화로 소외. 금융사기 취약. 대면/음성
+                채널(영업점·콜센터)과 동화 콘텐츠 결합으로 신뢰와 이해도 제고.
+              </p>
+            </div>
+            <div class="card">
+              <h3>사회초년생</h3>
+              <p>
+                신용·투자 개념 부족. 모바일 친화 동화/웹툰/숏폼·게임 요소로 흥미
+                유지, 습관 형성 지원.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 해결책 개요 -->
+      <section id="solution">
+        <div class="container">
+          <h2>해결책: AI 스토리텔링 기반 "금융 동화"</h2>
+          <p class="lead">
+            금융 데이터를 <b>동화 시나리오</b>로 재구성하고,
+            <b>일러스트·음성</b>까지 자동 생성하는 동적 콘텐츠 파이프라인.
+          </p>
+          <div class="flow mt-4">
+            <div class="step">
+              <b>입력 데이터</b>
+              <p class="ghost">약관·법규·사기 사례·상품 정보</p>
+            </div>
+            <div class="step">
+              <b>LLM + RAG</b>
+              <p class="ghost">최신·정확한 정보로 스크립트 생성</p>
+            </div>
+            <div class="step">
+              <b>멀티모달 생성</b>
+              <p class="ghost">이미지 생성 + TTS 나레이션</p>
+            </div>
+            <div class="step">
+              <b>배포</b>
+              <p class="ghost">앱·영업점·콜센터·메신저·ATM</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 주요 기능 -->
       <section id="features">
         <div class="container">
           <h2>주요 기능</h2>
-          <div class="grid-3">
+          <div class="grid-3 mt-2">
             <div class="card">
               <h3>AI 동화 자동 제작</h3>
               <p>
@@ -357,6 +423,8 @@
           </div>
         </div>
       </section>
+
+      <!-- 데이터 & AI 적용 -->
       <section id="data">
         <div class="container">
           <h2>활용 데이터 & 생성형 AI 적용</h2>
@@ -376,7 +444,7 @@
               </p>
             </div>
           </div>
-          <div class="accordion" style="margin-top: 32px">
+          <div class="accordion mt-8" id="ai-arch">
             <div class="acc-item">
               <div class="acc-head"><b>아키텍처 개요</b><span>+</span></div>
               <div class="acc-body">
@@ -403,6 +471,8 @@
           </div>
         </div>
       </section>
+
+      <!-- 차별성 -->
       <section id="diff">
         <div class="container">
           <h2>독창성 & 차별성</h2>
@@ -413,11 +483,11 @@
           </p>
           <div class="card">
             <div style="overflow: auto">
-              <table class="table" style="display: table; width: 100%">
+              <table class="table">
                 <thead>
                   <tr>
                     <th>구분</th>
-                    <th>기존(예: MSOA)</th>
+                    <th>기존(예: MSOA / Savvy Saving Seniors)</th>
                     <th>금융 동화</th>
                   </tr>
                 </thead>
@@ -444,6 +514,81 @@
                   </tr>
                 </tbody>
               </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 실현 가능성 -->
+      <section id="feasible">
+        <div class="container">
+          <h2>실현 가능성</h2>
+          <div class="grid-3 mt-2">
+            <div class="card">
+              <h3>기술</h3>
+              <p>
+                클라우드 LLM API 활용으로 빠른 구축. 핵심 난제는 데이터
+                연동·개인화 로직·보안.
+              </p>
+            </div>
+            <div class="card">
+              <h3>인프라</h3>
+              <p>기존 앱/영업점/콜센터 시스템에 API로 통합. 초기 비용 절감.</p>
+            </div>
+            <div class="card">
+              <h3>프로토타입</h3>
+              <p>스크립트→이미지→TTS 변환 PoC로 가치 검증. 단계적 확장 가능.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 기대 효과 -->
+      <section id="impact">
+        <div class="container">
+          <h2>기대되는 문제 해결 효과</h2>
+          <div class="grid-3 mt-2">
+            <div class="card">
+              <h3>사용자</h3>
+              <p>
+                어린이·시니어·초년생이 금융 개념을 직관적으로 이해. 습관·사기
+                예방에 기여.
+              </p>
+            </div>
+            <div class="card">
+              <h3>금융사</h3>
+              <p>
+                불완전판매 위험 감소, 신뢰 기반 장기 관계 형성, 만족도/충성도
+                향상.
+              </p>
+            </div>
+            <div class="card">
+              <h3>사회</h3>
+              <p>
+                금융 리터러시 저변 확대. 세대 간 격차 해소 및 포용적 금융 생태계
+                구축.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 확장성 -->
+      <section id="roadmap">
+        <div class="container">
+          <h2>발전 가능성 & 확장</h2>
+          <div class="grid-3 mt-2">
+            <div class="card">
+              <h3>개인 맞춤 플랫폼</h3>
+              <p>생애주기(초년생/신혼/자녀/은퇴)별 시리즈, 상품 추천 결합.</p>
+            </div>
+            <div class="card">
+              <h3>양방향 소통</h3>
+              <p>퀴즈·시뮬·대화형 에이전트로 학습 검증 및 참여도↑.</p>
+            </div>
+            <div class="card">
+              <h3>교육·제휴</h3>
+              <p>학교/기관 금융교육, 제휴사 상품 스토리 연계로 BM 확장.</p>
             </div>
           </div>
         </div>
