@@ -343,17 +343,29 @@
         margin-top: 8px;
       }
       @media (max-width: 980px) {
-        .hero,
-        .grid-2,
-        .grid-3,
-        .gallery {
+        .hero {
           grid-template-columns: 1fr;
+        }
+        .grid-3 {
+          grid-template-columns: 1fr;
+        }
+        .grid-2 {
+          grid-template-columns: 1fr;
+        }
+        .flow {
+          grid-template-columns: 1fr 1fr;
+        }
+        .gallery {
+          grid-template-columns: 1fr 1fr;
         }
         .nav ul {
           display: none;
         }
       }
       @media (max-width: 560px) {
+        .flow {
+          grid-template-columns: 1fr;
+        }
         .gallery {
           grid-template-columns: 1fr;
         }
