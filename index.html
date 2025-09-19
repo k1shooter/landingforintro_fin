@@ -108,6 +108,7 @@
         color: var(--text);
         background: rgba(255, 255, 255, 0.06);
       }
+
       .hero {
         display: grid;
         grid-template-columns: 1.25fr 1fr;
@@ -150,7 +151,6 @@
         color: var(--text);
         font-weight: 700;
         box-shadow: var(--shadow);
-        cursor: pointer;
       }
       .btn.primary {
         background: linear-gradient(135deg, var(--brand), #7cc5ff);
@@ -175,6 +175,7 @@
         font-size: 12px;
         color: var(--muted);
       }
+
       section {
         padding: 80px 0;
       }
@@ -212,46 +213,107 @@
         margin: 0;
         color: var(--muted);
       }
+
+      .flow {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        counter-reset: step;
+      }
+      .flow .step {
+        position: relative;
+        padding: 16px;
+        border-radius: 14px;
+        background: #10173a;
+        border: 1px dashed rgba(255, 255, 255, 0.08);
+      }
+      .flow .step::before {
+        counter-increment: step;
+        content: counter(step);
+        position: absolute;
+        inset: auto auto 8px 12px;
+        font-weight: 800;
+        color: var(--brand);
+        font-size: 12px;
+      }
+
+      .table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        overflow: auto;
+        display: block;
+      }
+      .table th,
+      .table td {
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 10px 12px;
+        text-align: left;
+      }
+      .table th {
+        background: #0e1533;
+        position: sticky;
+        top: 0;
+      }
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-size: 12px;
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--muted);
+      }
+
+      .accordion {
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 14px;
+        overflow: hidden;
+      }
+      .acc-item + .acc-item {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .acc-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px;
+        cursor: pointer;
+        background: #0f1632;
+      }
+      .acc-body {
+        display: none;
+        padding: 16px;
+        background: #0b122c;
+        color: var(--muted);
+      }
+
       .gallery {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
+        gap: 12px;
       }
-      .story-card {
-        cursor: pointer;
-        background: #10173a;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 16px;
-        overflow: hidden;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        box-shadow: var(--shadow);
-      }
-      .story-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-      }
-      .story-card img {
-        width: 100%;
-        aspect-ratio: 16 / 10;
-        object-fit: cover;
-        display: block;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      }
-      .story-card .title-area {
-        padding: 14px 16px;
-        font-weight: 800;
-        font-size: 15px;
+      .shot {
+        aspect-ratio: 16/10;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #1a2352, #0c1330);
+        display: grid;
+        place-items: center;
         color: var(--panel);
-        background: var(--muted);
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        font-weight: 800;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        background-size: cover;
+        background-position: center;
       }
+
       footer {
         padding: 40px 0;
         color: #a7b3d9;
         border-top: 1px solid rgba(255, 255, 255, 0.06);
       }
+
+      /* Utilities */
       .em {
         color: var(--brand);
         font-weight: 700;
@@ -262,18 +324,47 @@
         gap: 10px;
         flex-wrap: wrap;
       }
+      .ghost {
+        opacity: 0.8;
+      }
+      .right {
+        text-align: right;
+      }
+      .mt-8 {
+        margin-top: 32px;
+      }
+      .mt-4 {
+        margin-top: 16px;
+      }
+      .mt-2 {
+        margin-top: 8px;
+      }
+
+      /* Responsive */
       @media (max-width: 980px) {
-        .hero,
-        .grid-2,
-        .grid-3,
-        .gallery {
+        .hero {
           grid-template-columns: 1fr;
+        }
+        .grid-3 {
+          grid-template-columns: 1fr;
+        }
+        .grid-2 {
+          grid-template-columns: 1fr;
+        }
+        .flow {
+          grid-template-columns: 1fr 1fr;
+        }
+        .gallery {
+          grid-template-columns: 1fr 1fr;
         }
         .nav ul {
           display: none;
         }
       }
       @media (max-width: 560px) {
+        .flow {
+          grid-template-columns: 1fr;
+        }
         .gallery {
           grid-template-columns: 1fr;
         }
@@ -289,9 +380,13 @@
         </div>
         <nav>
           <ul>
-            <li><a href="#features">주요 기능</a></li>
+            <li><a href="#problem">문제</a></li>
+            <li><a href="#solution">해결책</a></li>
+            <li><a href="#features">기능</a></li>
+            <li><a href="#data">데이터&AI</a></li>
             <li><a href="#diff">차별성</a></li>
-            <li><a href="#poc">PoC 데모</a></li>
+            <li><a href="#impact">효과</a></li>
+            <li><a href="#poc">PoC</a></li>
           </ul>
         </nav>
       </div>
