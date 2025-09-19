@@ -857,7 +857,7 @@
         idxEl.textContent = `${sceneNum} / ${TOTAL_SCENES}`;
 
         // ▼▼▼ [수정] 모든 경로를 상대 경로로 변경 ▼▼▼
-        const basePath = `./output/${storyId}/`;
+        const basePath = `./stories/${storyId}/`;
         const imagePath = `${basePath}scene_${sceneNum}_image.png`;
         const audioPath = `${basePath}scene_${sceneNum}_audio.mp3`;
         const subtitlePath = `${basePath}scene_${sceneNum}_subtitle.txt`;
@@ -880,7 +880,7 @@
       async function loadStories() {
         try {
           // ▼▼▼ [수정] API 호출 대신 static JSON 파일 로드 ▼▼▼
-          const response = await fetch('./output/stories.json');
+          const response = await fetch('./stories/stories.json');
           const stories = await response.json();
 
           gallery.innerHTML = '';
@@ -896,7 +896,7 @@
 
             const imgEl = document.createElement('img');
             // ▼▼▼ [수정] 이미지 경로를 상대 경로로 설정 ▼▼▼
-            imgEl.src = `./output/${story.cover_image}`;
+            imgEl.src = `./stories/${story.cover_image}`;
             imgEl.alt = story.title;
 
             const titleAreaEl = document.createElement('div');
